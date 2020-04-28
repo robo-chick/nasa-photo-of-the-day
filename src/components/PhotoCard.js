@@ -21,13 +21,13 @@ export default function PhotoCard() {
   return (
       <div className='card-container'>
           <div className='image-container'>
-              <img src={photoData.url}/>
+              <img src={photoData.url} alt='nasa photo of the day'/>
           </div>
-          <div className='card-info'>
-              title={photoData.title}
+          <CardInfo
               date={photoData.date}
+              title={photoData.title}
               explanation={photoData.explanation}
-          </div>
+          />
       </div>
   )
 }
