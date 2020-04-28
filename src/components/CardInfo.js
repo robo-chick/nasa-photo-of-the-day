@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
 
-const CardInfo = ({title, date, explanation}) => {
+const CardInfo = ({date, title, explanation}) => {
     return (
-        <div class='photo-container'>
+        <div class='card-info-container'>
+            <h2>{date}</h2>
             <h2>{title}</h2>
-            <p>{date}</p>
             <p>{explanation}</p>
         </div>
     );
