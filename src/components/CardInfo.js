@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Card, CardBody, CardTitle, CardSubtitle, Col} from 'reactstrap';
 
 
 const CardInfo = ({date, title, explanation}) => {
@@ -10,5 +11,8 @@ const CardInfo = ({date, title, explanation}) => {
         </div>
     );
 }
+
+
+
 
 export default CardInfo;
