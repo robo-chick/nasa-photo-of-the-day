@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import CardInfo from './components/CardInfo';
+import CardInfo from './CardInfo';
 
 
 export default function PhotoCard() {
