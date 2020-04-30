@@ -1,8 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import CardInfo from './CardInfo';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle } from 'reactstrap';
+import styled from 'styled-components';
+
+const CardContainer = styled.div`
+background: #D3D3D3;
+`;
+
+ const SpaceImg = styled.img`
+ width: 90%;
+ height: 600px;
+ margin: 5%;
+ `;
+
+const CardHeader = styled.div`
+font-size: 2rem;
+margin-top: 4%;
+`;
+    
 
 
 export default function PhotoCard() {
@@ -10,7 +26,7 @@ export default function PhotoCard() {
 
   useEffect(() => {
       axios
-        .get('https://api.nasa.gov/planetary/apod?api_key=LmfDH8HgWhALVaH6wCfx8TRk1BLpP7RLBawZglzC')
+        .get('https://api.nasa.gov/planetary/apod?api_key=1mpVrJYvSeA5tgPmjJUds9CDPrhfmJ2GWnjYJqYE')
         .then(response => {
             console.log(response.data);
             setPhotoData(response.data);
@@ -32,18 +48,23 @@ export default function PhotoCard() {
 //           />
 //       </div>
 //   )
-    return (
-       
+
+
+    return ( 
         <Card>
-        <CardBody>
-            <CardTitle>{photoData.title}</CardTitle>
-            <CardSubtitle>{photoData.date}</CardSubtitle>
-        </CardBody>
-        <img width="100%" src={photoData.url} alt='nasa photo of the day' />
-        <CardBody>
-            <CardText>{photoData.explanation}</CardText>
-        </CardBody>
-        </Card>
-   
+            <CardContainer>
+                <CardBody>
+                    <CardHeader>
+                    <CardTitle>{photoData.title}</CardTitle>
+                     <CardSubtitle>{photoData.date}</CardSubtitle>
+                     </CardHeader>
+                </CardBody>
+             <SpaceImg width="100%" src={photoData.url} alt='nasa photo of the day' />
+                 <CardBody>
+                    <CardText>{photoData.explanation}</CardText>
+                 <CardText>Copyright: {photoData.copyright}</CardText>
+                </CardBody>
+                </CardContainer>
+            </Card>
     )
 }

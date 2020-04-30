@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {Card, CardBody, CardTitle, CardSubtitle, Col} from 'reactstrap';
+import React from 'react';
 
 
-const CardInfo = ({date, title, explanation}) => {
+const CardInfo = ({date, title, explanation, copyright}) => {
     return (
-        <div class='card-info-container'>
+        <div className='container'>
             <h2>{date}</h2>
             <h2>{title}</h2>
             <p>{explanation}</p>
+            <p>{copyright}</p>
         </div>
     );
 }
