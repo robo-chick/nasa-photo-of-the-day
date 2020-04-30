@@ -1,8 +1,6 @@
 import React from "react";
-import Header from './components/Header';
-import PhotoCard from './components/PhotoCard';
+import CardInfo from './components/CardInfo';
 import styled from 'styled-components';
-import { Container } from 'reactstrap';
 import Footer from './components/Footer';
 
 
@@ -14,12 +12,9 @@ background: #008080;
 function App() {
   return (
     <Main>
-     <Container 
-     className='themed-container'fluid='true'>
-        <Header />
-        <PhotoCard />
-        <Footer />
-      </Container>
+    <h1>NASA Photo of the Day</h1>
+    <CardInfo />
+    <Footer />
       </Main>
   );
 }
