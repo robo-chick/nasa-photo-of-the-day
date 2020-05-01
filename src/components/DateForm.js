@@ -3,6 +3,18 @@ import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styled from 'styled-components';
 
+const SelectorContainer = styled.div`
+display: flex;
+justify-content: flex-start;
+margin-top: 1% auto 0 5%;
+;`
+
+const DateSelector = styled.h2`
+font-family: 'Roboto', sans-serif;
+font-size: 1rem;
+;`
+
+
 
 
 export default function DateForm(props) {
@@ -16,13 +28,15 @@ export default function DateForm(props) {
             if(day < 10) day = '0' + day;
                 return `${year}-${month}-${day}`;
         }
-        props.setDate(convertDate(date))
-    }
+        props.setDate(convertDate(date));
+    }  
     return (
-        <div className='date-selector-container'>
-            <h2>Select Date:<Datepicker
+        <SelectorContainer>
+            <DateSelector>Select Date:<Datepicker
             selected = {new Date(props.date)}
-            onChange = {handleChange} /> </h2>
-        </div>
+            onChange = {handleChange} /> 
+            </DateSelector>
+        </SelectorContainer> 
     )
 };
+

@@ -7,12 +7,18 @@ import Footer from './components/Footer';
 const Main = styled.div`
 text-align: center;
 background: #008080;
+font-family: 'Roboto', sans-serif; 
+font-size: 2rem;
+`;
+
+const Heading = styled.h1`
+font-family: 'Barlow', sans-serif;
 `;
 
 function App() {
   return (
     <Main>
-    <h1>NASA Photo of the Day</h1>
+    <Heading>NASA Photo of the Day</Heading>
     <CardInfo />
     <Footer />
       </Main>
