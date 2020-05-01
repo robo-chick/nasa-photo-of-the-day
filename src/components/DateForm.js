@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 const SelectorContainer = styled.div`
 display: flex;
-justify-content: flex-start;
-margin-top: 1% auto 0 5%;
+justify-content: center;
+margin: 3%;
 ;`
 
 const DateSelector = styled.h2`

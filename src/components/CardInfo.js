@@ -48,11 +48,11 @@ export default function CardInfo() {
       <CardContainer>
         <Card>
            <CardBody>
+           <DateForm date={startDate} setDate={setStartDate} />
              <CardTitle>{photoData.title}</   CardTitle>
                <CardSubtitle>{photoData.copyright
                  ? `Copyright: ${photoData.copyright}` : null}
-                </CardSubtitle>
-                 <DateForm date={startDate} setDate={setStartDate} />
+                </CardSubtitle>            
             </CardBody>
               <ImageContainer>
                 <img width='85%'src={photoData.url} alt={photoData.title} />
