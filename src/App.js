@@ -1,14 +1,27 @@
 import React from "react";
-import "./App.css";
+import CardInfo from './components/CardInfo';
+import styled from 'styled-components';
+import Footer from './components/Footer';
+
+
+const Main = styled.div`
+text-align: center;
+background: #008080;
+font-family: 'Roboto', sans-serif; 
+font-size: 2rem;
+`;
+
+const Heading = styled.h1`
+font-family: 'Barlow', sans-serif;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    <Main>
+    <Heading>NASA Photo of the Day</Heading>
+    <CardInfo />
+    <Footer />
+      </Main>
   );
 }
 
